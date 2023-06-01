@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Conversion Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>File Conversion Website</h1>
+        <form id="conversionForm">
+            <div class="form-group">
+                <label for="inputFile">Select a file:</label>
+                <input type="file" id="inputFile" accept=".txt, .pdf, .jpg, .png, .jpeg">
+            </div>
+            <div class="form-group">
+                <label for="convertType">Conversion Type:</label>
+                <select id="convertType">
+                    <option value="pdf">PDF</option>
+                    <option value="txt">Text</option>
+                    <option value="docx">Word Document</option>
+                </select>
+            </div>
+            <button type="submit">Convert</button>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
